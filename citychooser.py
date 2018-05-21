@@ -1,13 +1,17 @@
 from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.label import Label
 from kivy.uix.button import Button
 
 city_list = {'blue': ['New York', 'Washington', 'Rome', 'Essen', 'St. Petersburg',
                       'San Francisco', 'Chicago', 'Montreal', 'Milan', 'Madrid',
-                      'xxx', 'yyy'],
-             'yellow': ['Kinshasa', 'Sau Paulo', 'Santiago', 'Lima'],
-             'red': ['Tokio', 'Hong Kong', 'Sidney'],
-             'black': ['Deli', 'Karachi']}
+                      'Paris', 'London', 'Atlanta'],
+             'yellow': ['Kinshasa', 'Sau Paulo', 'Santiago', 'Lima', 'Logos', 'Miami', 'Bogota', 'Los Angeles',
+                        'Mexico City', 'Khartoum', 'Johannesburg', 'Buenos Aires'],
+             'red': ['Tokyo', 'Hong Kong', 'Sidney', 'Bejing', 'Taipei', 'Seoul', 'Jakarta', 'Manila',
+                     'Ho Chi Minh City', 'Bangkok', 'Osaka', 'Shanghai'],
+             'black': ['Deli', 'Karachi', 'Algiers', 'Chennai', 'Cairo', 'Istanbul', 'Riyadh', 'Tehran',
+                       'Kolkata', 'Bagdad', 'Mumbai', 'Moscow']}
+
+# TODO Sort
 
 
 class CityChooser(BoxLayout):
