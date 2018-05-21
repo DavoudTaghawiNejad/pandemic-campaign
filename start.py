@@ -1,11 +1,15 @@
+from kivy.config import Config
+Config.set('graphics', 'width', '300')
+Config.set('graphics', 'height', '600')
 
 from kivy.app import App
 from kivy.uix.actionbar import ActionBar, ActionButton, ActionView, ActionPrevious, ActionOverflow
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.widget import WidgetException
 
-from act1.introduction import Introduction
+from act1.title import Title
 from legacy import Legacy
+
 
 
 class RootWidget(BoxLayout):
@@ -14,7 +18,7 @@ class RootWidget(BoxLayout):
         self.legacy = Legacy()
         self.actionbar = ActionBar(pos_hint={'top': 1})
         self.av = av = ActionView()
-        av.add_widget(ActionPrevious(title='Action Bar', with_previous=False))
+        av.add_widget(ActionPrevious(title='', with_previous=False))
         av.add_widget(ActionOverflow())
         backbutton = ActionButton(text='Back')
         av.add_widget(backbutton)
@@ -22,7 +26,7 @@ class RootWidget(BoxLayout):
         self.nextbutton = ActionButton(text='Next')
         av.add_widget(self.nextbutton)
         self.nextbutton.bind(on_press=(self.nextbtn))
-        self.monitor = Introduction(self)
+        self.last_widget = self.monitor = Title(self)
 
         self.actionbar.add_widget(av)
 

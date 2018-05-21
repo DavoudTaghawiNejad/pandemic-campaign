@@ -1,13 +1,12 @@
-from kivy.uix.label import Label
+from imagetext import ImageText
 from act3.gamesetup import GameSetup
 
 
-class Introduction(Label):
+class Introduction(ImageText):
     def __init__(self, main, **kwargs):
-        super().__init__(**kwargs, text="After successfully eliminating the BioTerrorist we need to clean up his mess")
-        self.main = main
-        self.main.next_visible(True)
-
+        super().__init__(main=main,
+                         image='terrorist.jpg',
+                         text="After successfully eliminating the bio terrorist we need to clean up his mess.")
 
     def next(self):
         return GameSetup(self.main)

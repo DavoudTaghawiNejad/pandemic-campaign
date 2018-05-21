@@ -5,6 +5,8 @@ from citychooser import CityChooser
 from act1.end import End
 
 
+# More stuff must happen earlier on
+
 class Game(BoxLayout):
     def __init__(self, main, **kwargs):
         super().__init__(**kwargs, orientation='horizontal')

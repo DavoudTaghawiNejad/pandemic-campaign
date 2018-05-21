@@ -5,8 +5,11 @@ from citychooser import CityChooser
 from act2.end import End
 
 
-bio_terrorist_route = ['Kinshasa', 'Sau Paulo', 'Santiago', 'Lima',
-                       'Tokio', 'Hong Kong', 'Sidney', 'Deli', 'Karachi']
+bio_terrorist_route = ['Tokio', 'Shanghai' 'Hong Kong', 'Kolkata', 'Deli', 'Karachi', 'Riyadh',
+                       'Cairo', ' Khartoum', 'Kinshasa', 'Lagos' 'Sau Paulo', 'Santiago',
+                       'Lima', 'Mexico City', 'Chicago', 'Montreal', 'New York', 'Washington', 'Atlanta',
+                       'Chicago', 'San Francisco']
+
 
 class Game(BoxLayout):
     def __init__(self, main, **kwargs):
@@ -41,6 +44,9 @@ class Game(BoxLayout):
         self.change_bio_terrorist_location()
         if self.moves == 3:
             self.objective.text = """Interpol, a bio terrorist is on the loose. 
+                                     He is headed for north America; Airports are 
+                                     monitored. New York is an unlikely entry point.
+                                     It appears he is always one step ahead.
                                      - you have one additional action: Search
                                      When you are in a city you can press the 
                                      search button, and if the Bioterrorist is 

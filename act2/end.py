@@ -1,15 +1,12 @@
-from kivy.uix.image import Image
-from kivy.uix.label import Label
+from imagetext import ImageText
 from act3.introduction import Introduction
 
 
-class End(Image):
+class End(ImageText):
     def __init__(self, main, **kwargs):
-        super().__init__(source='terrorist.jpg', allow_stretch=True, keep_ratio=True, **kwargs)
-        self.main = main
-        main.next_visible(True)
-        me = Label(text="You caught the bio terrorist!", center=self.main.center)
-        self.add_widget(me)
+        super().__init__(main=main,
+                         image='terrorist.jpg',
+                         text="You caught the bio terrorist!")
 
     def next(self):
         return Introduction(self.main)
